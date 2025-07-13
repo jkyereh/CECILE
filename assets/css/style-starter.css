@@ -10641,12 +10641,30 @@ ul.icon-rounded.address li p span.fa {
 .w3l-features-photo-7 .w3l-features-photo-7_top-right img {
   border-radius: 6px; }
 
-.w3l-features-photo-7 .feat_top {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 40px;
-  margin-top: 40px; }
+.w3l-features-photo-7 .feat_top.two-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.w3l-features-photo-7-box {
+  flex: 0 0 45%; /* two columns with some space */
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .w3l-features-photo-7-box {
+    flex: 0 0 100%; /* Stack on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .w3l-features-photo-7-box {
+    flex: 0 0 100% !important;
+  }
+}
+
 
 .w3l-features-photo-7 .w3l-features-photo-7-box {
   display: grid;
